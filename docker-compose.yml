@@ -9,6 +9,11 @@ services:
     build: ./updater
     volumes:
       - "env:/env"
+  watcher:
+    build: ./watcher
+    volumes:
+      - "env:/env"
+      - "/var/run/docker.sock:/var/run/docker.sock"
 volumes:
   env:
     external: false

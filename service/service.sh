@@ -1,16 +1,21 @@
 #!/bin/sh
-echo "starting service"
+echo "running service"
 touch /env/.env && chmod 777 /env/.env
-if grep -q "0" "/env/.env";
-then
-    echo "0 found"
-    while true
-    do
-        sleep 10s
-        cat /env/.env
-        date
-    done
-else
-    echo "0 not found :("
-    exit 1
-fi
+# if grep -q "3" "/env/.env";
+# then
+#     while true
+#     do
+#         sleep 8s
+#         date
+#     done
+# else
+#     echo "3 not found :("
+#     exit 1
+# fi
+counter=1
+while true
+do
+    sleep 5s
+    echo $counter
+    counter=`expr $counter + 1`
+done
