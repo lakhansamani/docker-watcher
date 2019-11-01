@@ -10,4 +10,5 @@ services:
       - "env:/env"
 volumes:
   env:
-    external: true
+    external: false
+    name: env

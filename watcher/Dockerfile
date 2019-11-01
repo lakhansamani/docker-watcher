@@ -1,2 +1,4 @@
 FROM alpine
-CMD ["sh", "ls env"]
+COPY watcher.sh /watcher.sh
+RUN chmod +x /watcher.sh
+CMD ["sh", "watcher.sh"]
