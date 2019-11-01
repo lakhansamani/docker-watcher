@@ -1,0 +1,2 @@
+echo "starting service"
+date
